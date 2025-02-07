@@ -1,37 +1,31 @@
 package com.example.listview;
 
 public class Fruits {
-    private String Name;
-    private String Description;
-    private int Image;
+    private String name;
+    private String description;
+    private int imageResource;
+    private String imagePath;
 
-    public Fruits(String name, String description, int image) {
-        Name = name;
-        Description = description;
-        Image = image;
+    public Fruits(String name, String description, int imageResource) {
+        this.name = name;
+        this.description = description;
+        this.imageResource = imageResource;
+        this.imagePath = null;
     }
 
-    public String getName() {
-        return Name;
+    public Fruits(String name, String description, String imagePath) {
+        this.name = name;
+        this.description = description;
+        this.imagePath = imagePath;
+        this.imageResource = -1;
     }
 
-    public void setName(String name) {
-        Name = name;
-    }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
 
-    public String getDescription() {
-        return Description;
-    }
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
 
-    public void setDescription(String description) {
-        Description = description;
-    }
-
-    public int getImage() {
-        return Image;
-    }
-
-    public void setImage(int image) {
-        Image = image;
-    }
+    public int getImageResource() { return imageResource; }
+    public String getImagePath() { return imagePath; }
 }

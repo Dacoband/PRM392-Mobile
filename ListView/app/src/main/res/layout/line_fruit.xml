@@ -26,17 +26,18 @@
         android:layout_width="172dp"
         android:layout_height="32dp"
         tools:ignore="MissingConstraints"/>
+
     <TextView
         android:id="@+id/textviewmota"
-        android:layout_width="266dp"
-        android:layout_height="57dp"
+        android:layout_width="255dp"
+        android:layout_height="48dp"
         android:layout_margin="10dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
         android:text="Description"
         android:textColor="#0A38E1"
         android:textSize="22dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textvienten"/>
+        app:layout_constraintTop_toBottomOf="@+id/textvienten" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
