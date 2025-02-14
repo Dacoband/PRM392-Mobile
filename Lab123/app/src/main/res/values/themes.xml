@@ -6,6 +6,7 @@
     </style>
 
     <style name="Theme.Lab123" parent="Base.Theme.Lab123" />
+
     <style name="Theme.Facebook" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>

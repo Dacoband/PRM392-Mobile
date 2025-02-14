@@ -26,5 +26,32 @@ public class Lab2 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button btnLab2_1 = findViewById(R.id.btnLab2_1);
+        btnLab2_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Lab2.this, Lab2_1.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnLab2_2 = findViewById(R.id.btnLab2_2);
+        btnLab2_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Lab2.this, Lab2_2.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnLab2_3 = findViewById(R.id.btnLab2_3);
+        btnLab2_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Lab2.this, Lab2_3.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
