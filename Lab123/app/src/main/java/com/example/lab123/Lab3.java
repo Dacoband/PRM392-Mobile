@@ -43,5 +43,14 @@ public class Lab3 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button btnLab3_3 = findViewById(R.id.btnLab3_3);
+        btnLab3_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Lab3.this, Lab3_3.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -32,10 +32,10 @@ public class Lab3_1 extends AppCompatActivity {
         List<String> list = new ArrayList<>();
         list.add("JavaScript");
         list.add("Java");
-        list.add("Swift");
+        list.add("C++");
         list.add("Go");
         list.add("C#");
-        list.add("Kotlin");
+        list.add("Rust");
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(Lab3_1.this, android.R.layout.simple_list_item_1, list);
         listView.setAdapter(arrayAdapter);
