@@ -1,5 +1,6 @@
 package com.example.bookmanagementapp;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -15,7 +16,7 @@ import com.example.bookmanagementapp.model.Author;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AuthorsFragment extends Fragment {
+public class AuthorsFragment extends Fragment implements AuthorAdapter.OnAuthorActionListener {
     private RecyclerView authorRecyclerView;
     private AuthorAdapter authorAdapter;
     private List<Author> authorList;
@@ -28,7 +29,7 @@ public class AuthorsFragment extends Fragment {
         dbHelper = new DatabaseHelper(getContext());
         authorRecyclerView = view.findViewById(R.id.authorRecyclerView);
         authorList = new ArrayList<>();
-        authorAdapter = new AuthorAdapter(authorList);
+        authorAdapter = new AuthorAdapter(authorList, this, dbHelper);
 
         authorRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         authorRecyclerView.setAdapter(authorAdapter);
@@ -52,12 +53,17 @@ public class AuthorsFragment extends Fragment {
             Author author = new Author();
             author.setId(cursor.getInt(cursor.getColumnIndex("Author_ID")));
             author.setName(cursor.getString(cursor.getColumnIndex("name")));
-            author.setEmail(cursor.getString(cursor.getColumnIndex("email")));
-            author.setPhone(cursor.getString(cursor.getColumnIndex("phone")));
             author.setAddress(cursor.getString(cursor.getColumnIndex("address")));
             authorList.add(author);
         }
         cursor.close();
         authorAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onUpdateAuthor(int authorId) {
+        Intent intent = new Intent(getActivity(), UpdateAuthorActivity.class);
+        intent.putExtra("author_id", authorId);
+        startActivity(intent);
     }
 }

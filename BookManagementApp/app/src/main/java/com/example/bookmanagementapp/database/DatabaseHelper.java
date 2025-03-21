@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "BookManagement.db";
     private static final int DATABASE_VERSION = 1;
+    private Context context; // Add a Context field
 
     // Bảng Author
     private static final String TABLE_AUTHOR = "Author";
@@ -54,5 +55,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_AUTHOR);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_BOOK);
         onCreate(db);
+    }
+
+    public Context getContext() {
+        return context;
     }
 }
