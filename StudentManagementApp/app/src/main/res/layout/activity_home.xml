@@ -19,17 +19,17 @@
         android:layout_weight="1"/>
 
     <Button
-        android:id="@+id/addBookButton"
+        android:id="@+id/addStudentButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Book"
+        android:text="Add Student"
         android:layout_marginTop="8dp"/>
 
     <Button
-        android:id="@+id/addAuthorButton"
+        android:id="@+id/addMajorButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Author"
+        android:text="Add Major"
         android:layout_marginTop="8dp"/>
 
     <Button
@@ -38,5 +38,4 @@
         android:layout_height="wrap_content"
         android:text="Logout"
         android:layout_marginTop="8dp"/>
-
 </LinearLayout>
